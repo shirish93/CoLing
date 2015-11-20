@@ -3,6 +3,7 @@ A repo of my experiments in Computational Linguistics, till they are mature enou
 
 ##Papers/Projects of note
 
+###Papers
 Here's an interesting list of recent papers/works in Computational Linguistics that I've been following:
 
 * [*Computational Linguistics and Deep Learning*](http://www.mitpressjournals.org/doi/pdf/10.1162/COLI_a_00239) by [Prof Chris Manning](https://twitter.com/chrmanning) of Stanford.
@@ -17,6 +18,8 @@ Is a _really, really_ good intro to the field, and brings one up-to-date with th
 
 The paper that introduced the Word2Vec model to the world. There's many follow-up papers that are important too that I'll update this list with.
 ___
+
+###Projects
 * For those more humanistically inclined, [Benamin Schmidt](https://twitter.com/benmschmidt) has a fantastic post titled [Rejecting the gender binary: a vector-space operation](http://bookworm.benschmidt.org/posts/2015-10-30-rejecting-the-gender-binary.html) that will most certainly give one experiment ideas.
 
 
