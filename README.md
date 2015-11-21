@@ -44,7 +44,10 @@ ___
 ##Running Experiments
 
 ```
-Because the experiments can often fail miserably, making the experimenter look foolish for not considering the obvious, I have not included the models for the following in the datasets that have been made public.
+Because the experiments can often fail miserably,
+making the experimenter look foolish for not considering the obvious, 
+I have not included the models for the following in the datasets 
+that have been made public.
 ```
 
 * Stripping the Nepali corpus of all vowels, to see how much 'one-off' words/misspellings decrease by.
