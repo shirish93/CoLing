@@ -4,4 +4,18 @@ https://onedrive.live.com/?cid=7cc22cf7576cff2d&id=7CC22CF7576CFF2D%216178&authk
 
 Download from the location and open it using python gensim package. Refer to other documents for further information.
 
-The models were originally stored in this location, but GitHub does not get happy when you store huge datasets in their servers + Git is the wrong tool to handle massive binary files.
+The models were originally stored in this repo, but GitHub does not get happy when you store huge datasets in their servers + Git is the wrong tool to handle massive binary files.
+
+###Model Information
+
+The dataset contains 2 python word2vec models: Kantipur and TKP. The Kantipur model should be opened using python 3.x, and the TKP model should be opened using python 2.7.x. The two models are incompatible with each other, and will NOT work in the wrong version of python.
+
+###Training Details
+
+The Kantipur model was trained on ~450 000 newspaper articles from Nepali newspaper Kantipur. The TKP model was trained on ~230 000 english newspaper articles from various newspapers in Nepal.
+
+I don't remember the exact parameters for training. The vector sizes are (probably) ~500, word window ~12, and both model use skip-gram. The Kantipur model also uses negative sampling. All the other parameters were set to the recommended values.
+
+###Uses
+
+I do not have the corpora used to train those datasets anymore. However, there are several fun projects, in ML/CoLing, and in digital humanities that don't require the corpus to experiment with: the trained models will suffice. Check in the readme for the project for possible hints. Check out the 'projects' section for particularly interesting examples.
