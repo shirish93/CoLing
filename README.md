@@ -43,9 +43,9 @@ ___
 
 ##Running Experiments
 
-'''
+```
 Because the experiments can often fail miserably, making the experimenter look foolish for not considering the obvious, I have not included the models for the following in the datasets that have been made public.
-'''
+```
 
 * Stripping the Nepali corpus of all vowels, to see how much 'one-off' words/misspellings decrease by.
 * Using 3-grams to replace rare words, such that vocabulary is not reduced. Kind of like a poor man's version of char-level embeddings.
