@@ -1,0 +1,7 @@
+The models are stored at:
+
+https://onedrive.live.com/?cid=7cc22cf7576cff2d&id=7CC22CF7576CFF2D%216178&authkey=%21AN89qA7PCfp61z4
+
+Download from the location and open it using python gensim package. Refer to other documents for further information.
+
+The models were originally stored in this location, but GitHub does not get happy when you store huge datasets in their servers + Git is the wrong tool to handle massive binary files.
