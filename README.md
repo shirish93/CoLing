@@ -22,10 +22,13 @@ ___
 ###Projects
 * For those more humanistically inclined, [Benamin Schmidt](https://twitter.com/benmschmidt) has a fantastic post titled [Rejecting the gender binary: a vector-space operation](http://bookworm.benschmidt.org/posts/2015-10-30-rejecting-the-gender-binary.html) that will most certainly give one experiment ideas.
 
+___
+#Downloads
+
+You can download the pre-trained models that I created [here](https://onedrive.live.com/?cid=7cc22cf7576cff2d&id=7CC22CF7576CFF2D%216178&authkey=%21AN89qA7PCfp61z4
+). Look in the "Model" folder for instructions and other details.
 
 ___
-___
-
 
 ##Currently Reading and Exploring
 
@@ -37,7 +40,13 @@ This is a list of papers I'm reading/exploring and either figuring out a way to 
 * The other paper I was looking at... That allows for better extraction of multiple meanings of same words. can't remember atm.
 
 ___
-#Downloads
 
-You can download the pre-trained models that I created [here](https://onedrive.live.com/?cid=7cc22cf7576cff2d&id=7CC22CF7576CFF2D%216178&authkey=%21AN89qA7PCfp61z4
-). Look in the "Model" folder for instructions and other details.
+##Running Experiments
+
+'''
+Because the experiments can often fail miserably, making the experimenter look foolish for not considering the obvious, I have not included the models for the following in the datasets that have been made public.
+'''
+
+* Stripping the Nepali corpus of all vowels, to see how much 'one-off' words/misspellings decrease by.
+* Using 3-grams to replace rare words, such that vocabulary is not reduced. Kind of like a poor man's version of char-level embeddings.
+* Combining the above two, along with (...lookup the paper) to make sure multiple meanings of de-voweled words are preserved. This is STRICTLY work in progess.
