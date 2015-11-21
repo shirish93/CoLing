@@ -23,6 +23,10 @@ ___
 * For those more humanistically inclined, [Benamin Schmidt](https://twitter.com/benmschmidt) has a fantastic post titled [Rejecting the gender binary: a vector-space operation](http://bookworm.benschmidt.org/posts/2015-10-30-rejecting-the-gender-binary.html) that will most certainly give one experiment ideas.
 
 
+___
+___
+
+
 ##Currently Reading and Exploring
 
 This is a list of papers I'm reading/exploring and either figuring out a way to implement or waiting for implementation. 
