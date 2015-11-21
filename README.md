@@ -31,3 +31,9 @@ This is a list of papers I'm reading/exploring and either figuring out a way to 
 * Infinite-lenght word embedding vectors
 * ^- the paper that inspired it.
 * The other paper I was looking at... That allows for better extraction of multiple meanings of same words. can't remember atm.
+
+___
+#Downloads
+
+You can download the pre-trained models that I created [here](https://onedrive.live.com/?cid=7cc22cf7576cff2d&id=7CC22CF7576CFF2D%216178&authkey=%21AN89qA7PCfp61z4
+). Look in the "Model" folder for instructions and other details.
