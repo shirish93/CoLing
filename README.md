@@ -34,10 +34,11 @@ ___
 
 This is a list of papers I'm reading/exploring and either figuring out a way to implement or waiting for implementation. 
 
-* Inducing semantic meaning into word embedding models(?)
-* Infinite-lenght word embedding vectors
+* [RetrofittingWord Vectors to Semantic Lexicons](http://arxiv.org/pdf/1411.4166.pdf)
+* [Infinite-dimensional word embedding](http://arxiv.org/abs/1511.05392)
 * ^- the paper that inspired it.
-* The other paper I was looking at... That allows for better extraction of multiple meanings of same words. can't remember atm.
+* [Breaking Sticks And Ambiguities With Adaptive Skip-Gram](http://arxiv.org/pdf/1502.07257v2.pdf)
+* [sense2vec - A Fast and Accurate Method for Word Sense Disambiguation In Neural Word Embeddings](http://arxiv.org/abs/1511.06388)
 
 ___
 
