@@ -34,9 +34,8 @@ ___
 
 This is a list of papers I'm reading/exploring and either figuring out a way to implement or waiting for implementation. 
 
-* [RetrofittingWord Vectors to Semantic Lexicons](http://arxiv.org/pdf/1411.4166.pdf)
+* [Retrofitting Word Vectors to Semantic Lexicons](http://arxiv.org/pdf/1411.4166.pdf)
 * [Infinite-dimensional word embedding](http://arxiv.org/abs/1511.05392)
-* ^- the paper that inspired it.
 * [Breaking Sticks And Ambiguities With Adaptive Skip-Gram](http://arxiv.org/pdf/1502.07257v2.pdf)
 * [sense2vec - A Fast and Accurate Method for Word Sense Disambiguation In Neural Word Embeddings](http://arxiv.org/abs/1511.06388)
 
@@ -53,4 +52,10 @@ that have been made public.
 
 * Stripping the Nepali corpus of all vowels, to see how much 'one-off' words/misspellings decrease by.
 * Using 3-grams to replace rare words, such that vocabulary is not reduced. Kind of like a poor man's version of char-level embeddings.
-* Combining the above two, along with (...lookup the paper) to make sure multiple meanings of de-voweled words are preserved. This is STRICTLY work in progess.
+* Combining the above two, along with ways to retrofit them(look at the reference papers) to make sure multiple meanings of de-voweled words are preserved. This is STRICTLY work in progess.
+* Related to above: Need to be able to retrofit the Nepali trained model using a Nepali dictionary. The UChicago librarian had given offer of help, but has now gone AWOL. Need to reestablish contact and work on that.
+
+* #####Projects in digital humanities
+  * Cooccurence of castes according to activities?
+  * Gendered words, and the relationship between gendered pronouns and neighboring words
+  * More stuff here.
