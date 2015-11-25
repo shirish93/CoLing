@@ -51,7 +51,12 @@ that have been made public.
 ```
 
 * Stripping the Nepali corpus of all vowels, to see how much 'one-off' words/misspellings decrease by.
+  
 * Using 3-grams to replace rare words, such that vocabulary is not reduced. Kind of like a poor man's version of char-level embeddings.
+  Out of vocabulary words (OOV) are a problem. 375 000 words >10 occurences. 1.4 M words with usage less than that.
+  Mispellings + morphological complexity is a problem.
+  This is ALL strictly untrained. Difference with existing work.
+
 * Combining the above two, along with ways to retrofit them(look at the reference papers) to make sure multiple meanings of de-voweled words are preserved. This is STRICTLY work in progess.
 * Related to above: Need to be able to retrofit the Nepali trained model using a Nepali dictionary. The UChicago librarian had given offer of help, but has now gone AWOL. Need to reestablish contact and work on that.
 
