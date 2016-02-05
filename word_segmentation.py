@@ -1,3 +1,12 @@
+'''
+TODO: 
+* There's an annoying bug that will cut off the last char on certain strings but not others. Fix it.
+* More testing!
+* Change 'similarities' from N*N to linear, so that speed is sub-second.
+
+'''
+
+
 testWord = 'बन्दीप्रतिकोव्यवहारसम्बन्धीमापदण्डअनुकूलको'
 def get_all_substrings(string):
   '''takes in an unsegmented string, and depends on the global var 'vocab'.
@@ -79,3 +88,9 @@ def wordsStartingIn(startingChar, curTokenList, repCount = 0):
 	
 	return [], len(curTokenList)
 	
+def similarities(wordList, model):
+	totalScore = 0
+	for i in range(len(wordList)):
+		for j in range(i+1, len(wordList)):
+			totalScore += model.n_similarity(wordList[i], wordList[j])
+	return totalScore/len(wordList)
