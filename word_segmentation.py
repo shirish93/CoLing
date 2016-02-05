@@ -45,9 +45,12 @@ def startWord (word, tokenList):
 	seedWords = wordsStartingIn(word[0], tokenList)
 	words = seedWords[0]
 	lastPos = seedWords[1]
+	tot = []
 	for each in words:
 		res = genChild(word, each, 0, lastPos, tokenList)
-
+		print (len(res))
+		tot+=res
+	return tot
 	
 def wordsStartingIn(startingChar, curTokenList):
 	i = 0
