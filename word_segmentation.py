@@ -11,9 +11,6 @@ def get_all_substrings(string):
                 yield(string[i:j])
 
 def genChild(word, token, startPosInWord, endPosInList, tokenList):
-  '''depends on the gloval var 'parts'. It should be a set
-  
-  '''
 	global parts
 	startPos = startPosInWord
 	nextWordPos = startPos + len(token)
@@ -23,15 +20,14 @@ def genChild(word, token, startPosInWord, endPosInList, tokenList):
 		#This is the final token
 		return token
 	#There are other tokens to be made
+	
+	#if token == 'सम्बन्धी' or 'सम्बन्धी' in token:
+	#	set_trace()
 	nextChar = word[nextWordPos]
-	genTokens = wordsStartingIn(nextChar, tokenList[nextPos:])
-	#BIG BAD BUG IN THE LINE ABOVE!!!!
-	###IF THE FIRST CHARACTER AFTER THE CURRENT TOKEN HAPPENS TO BE IN THE TOKEN TOO
-	###IT WILL FIND THE TOKEN *_in__* THE WORD, AND SKIP OUT, BECAUSE THAT'S WHAT IT DOES.
-	###SOLUTION: FIGURE OUT HOW THE CURRENT 'WORD' ENDS, SO YOU CAN GO DO THE NEXT RANGE.
-	###EG:
-	###[हार', 'र', 'रस', 'स', 'सम', 'सम्बन्ध', 'सम्बन्धी', 'म', 'म्', 'ब', 'बन', 'बन्', 'बन्ध', 'न', 'न्', 'ध', 'धी', 'धीमा', 'म', 'मा', 'माप', 'मापदण्ड', 'मा'
-	#, 'सम्बन्धी ENDSearly and looks for ma. finds the one that is in it, and then stalls there.
+	#occurrences of next in me
+	repCount = token.count(nextChar)
+		
+	genTokens = wordsStartingIn(nextChar, tokenList[nextPos:], repCount = repCount)
 	nextTokens = genTokens[0]
 	nextPos = genTokens[1] + nextPos
 	#Run this function recursively on each
@@ -40,13 +36,14 @@ def genChild(word, token, startPosInWord, endPosInList, tokenList):
 		for tok in nextTokens:
 			children = genChild(word, tok, nextWordPos, nextPos, tokenList)
 			for child in children:
+				#if 'सम्बन्धी' in child:
+				#	#set_trace()
 				if token+child.replace('_','') in word:
 					res = token+"_"+child
 					toReturn.append(res)
 					parts.add(res)
 				#pdb.set_trace()
 	return toReturn
-
 
 def startWord (word, tokenList):
 	seedWords = wordsStartingIn(word[0], tokenList)
@@ -59,18 +56,26 @@ def startWord (word, tokenList):
 		tot+=res
 	return tot
 	
-def wordsStartingIn(startingChar, curTokenList):
-	i = 0
+def wordsStartingIn(startingChar, curTokenList, repCount = 0):
+	global counter
 	counter += 1
+	i = 0
 	tokenList = curTokenList
+	#pdb.set_trace()
 	if len(tokenList)>0:
-		while i <len(tokenList) and startingChar != tokenList[i][0]:
-			i += 1
-		#Now that we have the position:
-		match_toks = []
-		while i< len(tokenList) and startingChar == tokenList[i][0]:
-			match_toks.append(tokenList[i])
-			i += 1
+		while repCount >= 0:
+			while i <len(tokenList) and startingChar != tokenList[i][0]:
+				i += 1
+			#Now that we have the position:
+			match_toks = []
+			while i< len(tokenList) and startingChar == tokenList[i][0]:
+				if repCount == 0:
+					match_toks.append(tokenList[i])
+				i += 1
+			
+			repCount -=1
+			
 		return match_toks, i
 	
 	return [], len(curTokenList)
+	
