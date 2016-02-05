@@ -53,6 +53,13 @@ Because the experiments can often fail miserably,
 making the experimenter look foolish for not considering the obvious, 
 I have not included the models for the following in the datasets 
 that have been made public.
+
+That would be the first thought. However, collecting data is a work in 
+itself, and so is processing it. All the data models mentioned in 
+this repo are available, most likely at my onedrive linked in the README.
+
+If they are not, send me a message, and they will be made available at the
+earliest.
 ```
 
 * Stripping the Nepali corpus of all vowels, to see how much 'one-off' words/misspellings decrease by.
