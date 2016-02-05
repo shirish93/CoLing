@@ -25,6 +25,13 @@ def genChild(word, token, startPosInWord, endPosInList, tokenList):
 	#There are other tokens to be made
 	nextChar = word[nextWordPos]
 	genTokens = wordsStartingIn(nextChar, tokenList[nextPos:])
+	#BIG BAD BUG IN THE LINE ABOVE!!!!
+	###IF THE FIRST CHARACTER AFTER THE CURRENT TOKEN HAPPENS TO BE IN THE TOKEN TOO
+	###IT WILL FIND THE TOKEN *_in__* THE WORD, AND SKIP OUT, BECAUSE THAT'S WHAT IT DOES.
+	###SOLUTION: FIGURE OUT HOW THE CURRENT 'WORD' ENDS, SO YOU CAN GO DO THE NEXT RANGE.
+	###EG:
+	###[हार', 'र', 'रस', 'स', 'सम', 'सम्बन्ध', 'सम्बन्धी', 'म', 'म्', 'ब', 'बन', 'बन्', 'बन्ध', 'न', 'न्', 'ध', 'धी', 'धीमा', 'म', 'मा', 'माप', 'मापदण्ड', 'मा'
+	#, 'सम्बन्धी ENDSearly and looks for ma. finds the one that is in it, and then stalls there.
 	nextTokens = genTokens[0]
 	nextPos = genTokens[1] + nextPos
 	#Run this function recursively on each
