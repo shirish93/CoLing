@@ -1,3 +1,4 @@
+testWord = 'बन्दीप्रतिकोव्यवहारसम्बन्धीमापदण्डअनुकूलको'
 def get_all_substrings(string):
   '''takes in an unsegmented string, and depends on the global var 'vocab'.
   returns: all substrings of the given string, every string a valid vocab token.
