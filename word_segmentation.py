@@ -12,15 +12,14 @@ TODO:
 
 testWord = 'बन्दीप्रतिकोव्यवहारसम्बन्धीमापदण्डअनुकूलको'
 def get_all_substrings(string):
-  '''takes in an unsegmented string, and depends on the global var 'vocab'.
-  returns: all substrings of the given string, every string a valid vocab token.
+  '''takes in an unsegmented string, and depends on the global var 'vocab'.   returns: all substrings of the given string, every string a valid vocab token.
   tokens beginning in markers are invalid tokens
   '''
-    length = len(string)
-    for i in range(length):
-        for j in range(i + 1, length + 1):
-            if string[i:j] in vocab and string[i:j][0].isalpha():
-                yield(string[i:j])
+  length = len(string)
+  for i in range(length):
+      for j in range(i + 1, length + 1):
+          if string[i:j] in vocab and string[i:j][0].isalpha():
+              yield(string[i:j])
 
 def genChild(word, token, startPosInWord, endPosInList, tokenList):
 	global parts
