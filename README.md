@@ -1,6 +1,11 @@
 # CoLing
 A repo of my experiments in Computational Linguistics, till they are mature enough to require their own repos.
 
+##Hot Now
+
+* Just added the IPYNB
+* Added the segmentation tool. Works remarkably well. Need to figure out the use of Word2Vec similarities for best segmentation.
+
 ##Papers/Projects of note
 
 ###Papers
