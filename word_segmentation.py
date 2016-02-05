@@ -1,5 +1,8 @@
 '''
 TODO: 
+
+####SUSPECTED BUG: IF THE LAST WORD IS A WHOLE THING (WORD IN ITSELF), it WILL GET CUT OFF FROM BEING REPRESENTED AS ITSELF.
+####TEST: test with 'mapdandaanukulko' and see how it works.
 * There's an annoying bug that will cut off the last char on certain strings but not others. Fix it.
 * More testing!
 * Change 'similarities' from N*N to linear, so that speed is sub-second.
