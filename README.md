@@ -1,6 +1,11 @@
 # CoLing
 A repo of my experiments in Computational Linguistics, till they are mature enough to require their own repos.
 
+##Hot Now
+
+* Just added the IPYNB
+* Added the segmentation tool. Works remarkably well. Need to figure out the use of Word2Vec similarities for best segmentation.
+
 ##Papers/Projects of note
 
 ###Papers
@@ -48,6 +53,13 @@ Because the experiments can often fail miserably,
 making the experimenter look foolish for not considering the obvious, 
 I have not included the models for the following in the datasets 
 that have been made public.
+
+That would be the first thought. However, collecting data is a work in 
+itself, and so is processing it. All the data models mentioned in 
+this repo are available, most likely at my onedrive linked in the README.
+
+If they are not, send me a message, and they will be made available at the
+earliest.
 ```
 
 * Stripping the Nepali corpus of all vowels, to see how much 'one-off' words/misspellings decrease by.
@@ -64,7 +76,10 @@ that have been made public.
   * Cooccurence of castes according to activities?
   * Gendered words, and the relationship between gendered pronouns and neighboring words
   * More stuff here.
+<<<<<<< HEAD
 
 ##Work in Progress
 
 * Using ~5 million Nepali tweets to train a word2vec model/use lessons from running experiments.
+=======
+>>>>>>> 0ee4f57bfa2899a5cfabc9490ed057274dba3200
