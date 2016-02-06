@@ -1,0 +1,16 @@
+v1
+model = Word2Vec(allTexts, workers = 54, size = 300, iter = 10, window = 10, min_count = 10, sample = 1e-5)
+
+v2
+model = Word2Vec(allTexts, workers = 18, size = 300, iter = 25, window = 8, min_count = 15, sample = 1e-5, negative = 20)
+
+
+Rejects:
+tests = 
+dharmasankat - nayak
+waasana -kaamwaasana
+udar - bajarmukhi
+
+Negatives:
+
+Grahan - shapath - swamitwa
