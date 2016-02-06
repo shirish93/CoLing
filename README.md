@@ -64,3 +64,7 @@ that have been made public.
   * Cooccurence of castes according to activities?
   * Gendered words, and the relationship between gendered pronouns and neighboring words
   * More stuff here.
+
+##Work in Progress
+
+* Using ~5 million Nepali tweets to train a word2vec model/use lessons from running experiments.
