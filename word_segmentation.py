@@ -4,6 +4,8 @@ TODO:
 * More testing!
 * Change 'similarities' from N*N to linear, so that speed is sub-second.
 * Write a tutorial, in Jupyter notebook, to show what I did, and how it is SO FRIGGIN COOL!!!
+* Fix other errors
+
 '''
 
 
