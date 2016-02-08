@@ -7,12 +7,29 @@ model = Word2Vec(allTexts, workers = 54, size = 300, iter = 10, window = 10, min
 
 v2
 model = Word2Vec(allTexts, workers = 18, size = 300, iter = 25, window = 8, min_count = 15, sample = 1e-5, negative = 20)
+#Performed poorly compared against existing models.
+#A significantly large vocab, even though min_count was larger than v1 (?!!?)
+#After further testing on other models, check what was wrong with this. Suspicion that negative sampling *severely* compromised the performance, at very little/no space/train-time gain.
 
-Currently Running
+#Planned:
+Confirm that the vocab looks 'normal'.
+
+v3
 Shuffled the list before starting.
 model = Word2Vec(allTexts, workers = 40, size = 300, iter = 16, window = 10, min_count = 8, sample = 1e-5)
 #Observation: Seems to be running *QUITE* a bit faster than v1? Hardware-related?
+Update: Observation not accurate.
 
+Planned:
+Test this model against the existing models.
+
+Currently planned experiments:
+# Check against min_count = 15, with v1 parameters. Suspicion that words between min_count 10 - 15 are noisy.
+# Assure that training samples are shuffled *between* training rounds, so that newspaper-specific issues don't create undesired artifacts.
+#Create new dataset with one-off OOV words replaced with the suggested words.
+
+
+Tests for checking how good the models are.
 Rejects:
 tests = 
 dharmasankat - nayak
