@@ -47,3 +47,4 @@ udar - bajarmukhi
 Negatives:
 
 Grahan - shapath - swamitwa
+['सलाम', 'स्यालुट'], ['वालेकुम']
