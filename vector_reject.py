@@ -28,7 +28,7 @@ def reject_words(A, B):
   r = reject(basic_mean, reject_mean)
   dists = np.linalg.linalg.dot(model.syn0, r)
   best  = matutils.argsort(dists, topn = 500, reverse = True)
-  result = [(model.index2word[sim], float(dists[sim])) for sim in best if model.index2word[sim] not in in_words]
+  result = [(model.index2word[sim], float(dists[sim])) for sim in best if A[0] not in model.index2word[sim]]
   return result
 
 
@@ -45,7 +45,7 @@ def reject_words_1(A, B):
   r = reject(basic_mean, reject_mean)
   dists = np.linalg.linalg.dot(model.syn0norm, r)
   best  = matutils.argsort(dists, topn = 500, reverse = True)
-  result = [(model.index2word[sim], float(dists[sim])) for sim in best if model.index2word[sim] not in in_words]
+  result = [(model.index2word[sim], float(dists[sim])) for sim in best if A[0] not in model.index2word[sim]]
   return result
 
 def compareWords(wordlist1, wordlist2):
@@ -56,6 +56,7 @@ def compareWords(wordlist1, wordlist2):
   printJustified(['regular_sim']+list(list(zip(*regular_sim))[0]), ['reject_syn0']\
                  +list(list(zip(*rejectWords))[0]),
                  ['reject_syn0norm']+list(list(zip(*rejectWords1))[0]))
+
   
 def printJustified(res1, res2, res3):
   zp = zip(res1, res2, res3)

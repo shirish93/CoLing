@@ -20,7 +20,7 @@ v3
 Shuffled the list before starting.
 model = Word2Vec(allTexts, workers = 40, size = 300, iter = 16, window = 10, min_count = 8, sample = 1e-5)
 #Observation: Seems to be running *QUITE* a bit faster than v1? Hardware-related?
-<<<<<<< HEAD
+
 * Maybe not as fast as originally assumed.
 
 ---
@@ -35,7 +35,6 @@ Currently planned experiments:
 # Assure that training samples are shuffled *between* training rounds, so that newspaper-specific issues don't create undesired artifacts.
 #Create new dataset with one-off OOV words replaced with the suggested words.
 
->>>>>>> 252c77112e053465d558ee93fea40cb0aa745e30
 
 Tests for checking how good the models are.
 Rejects:
@@ -48,3 +47,4 @@ Negatives:
 
 Grahan - shapath - swamitwa
 ['सलाम', 'स्यालुट'], ['वालेकुम']
+(['राष्ट्रपति', 'राष्ट्रपती'], ['ओबामा', 'रामवरण', 'संसद'])
