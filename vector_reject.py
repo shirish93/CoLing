@@ -19,7 +19,7 @@ def reject(A,B):
   project = np.linalg.linalg.dot(A, B) * B
   return A - project
 
-def reject_words(A, B):
+def reject_words(A, B):compa
   '''Takes two **LIST OF WORDS** and
   returns most_similar for word A, while rejecting words with meanings closer to B.
   Seems to work better than just giving in negative words.
@@ -64,22 +64,29 @@ def reject_words_1(A, B, model = model):
   result = [(model.index2word[sim], float(dists[sim])) for sim in best if model.index2word[sim] not in in_words]
   return result
 from tabulate import tabulate
+
+
+def clearRoot(lst, word):
+  return [each for each in lst if word not in each]
+
 def compareWords(wordlist1, wordlist2, multimodal = False):
-  regular_sim = model.most_similar(wordlist1, negative = wordlist2, topn=200)[:20]
+  regular_sim = model.most_similar(wordlist1, negative = wordlist2, topn=200)
   #rejectWords = reject_words_1(wordlist1, wordlist2, model)[:20]
-  rejectWords1 = reject_words_1(wordlist1, wordlist2, model)[:20]
+  rejectWords1 = reject_words_1(wordlist1, wordlist2, model)
+  r = wordlist1[0]
 
   if not multimodal:
       printJustified(['regular_sim']+list(list(zip(*regular_sim))[0]),\
                      ['reject_syn0norm']+list(list(zip(*rejectWords1))[0]))
   else:
-      regular_sim_1 = model1.most_similar(wordlist1, negative = wordlist2, topn=200)[:20]
-      rejectWords1_1 = reject_words_1(wordlist1, wordlist2, model1)[:20]
+      regular_sim_1 = model1.most_similar(wordlist1, negative = wordlist2, topn=200)
+      rejectWords1_1 = reject_words_1(wordlist1, wordlist2, model1)
       print(\
-        tabulate({"mod0_regular_sim": list(list(zip(*regular_sim))[0]),\
-                "mod0_reject_syn0norm": list(list(zip(*rejectWords1))[0]),\
-                'mod1_regular_sim':list(list(zip(*regular_sim_1))[0]), \
-                'mod1_reject_syn0norm' : list(list(zip(*rejectWords1_1))[0])},\
+        tabulate({"mod0_regular_sim": clearRoot(list(list(zip(*regular_sim))[0]), r)[:20],\
+                "mod0_reject_syn0norm": clearRoot(list(list(zip(*rejectWords1))[0]), r)[:20],\
+                'mod1_regular_sim': clearRoot(list(list(zip(*regular_sim_1))[0]), r)[:20], \
+                'mod1_reject_syn0norm' : clearRoot(list(list(zip(*rejectWords1_1))[0]), r)[:20]
+                  },\
                headers = 'keys')
         )
       #printJustified(['_mod0_regular_sim']+list(list(zip(*regular_sim))[0]),\
