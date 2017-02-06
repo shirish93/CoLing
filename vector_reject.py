@@ -6,7 +6,7 @@ from numpy import float32 as REAL
 from gensim.models import Word2Vec
 from numpy import array
 from unicodedata import normalize
-model = Word2Vec.load('C:\Users\spokha01\SkyDrive\Public\Public Datasets\Kantipur')
+model = Word2Vec.load(r'C:\Users\spokha01\SkyDrive\Public\Public Datasets\Kantipur')
 
 def reject(A,B):
   #RAW REJECT, REJECT VECTOR B FROM VEC -A

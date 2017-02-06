@@ -3,7 +3,8 @@ A repo of my experiments in Computational Linguistics, till they are mature enou
 
 ##Hot Now
 
-* [ ] Just added the IPYNB
+* List of a LOT of Nepali last names!
+* [x] Just added the IPYNB
 * [x] Added the segmentation tool. Works remarkably well. 
 *  [x] Need to figure out the use of Word2Vec similarities for best segmentation.
 
