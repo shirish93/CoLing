@@ -3,8 +3,14 @@ A repo of my experiments in Computational Linguistics, till they are mature enou
 
 ##Hot Now
 
+<<<<<<< HEAD
 * List of a LOT of Nepali last names!
 * [x] Just added the IPYNB
+=======
+
+* [ ] Use diff-patch-match to identify common spelling errors
+* [ ] Just added the IPYNB
+>>>>>>> origin/master
 * [x] Added the segmentation tool. Works remarkably well. 
 *  [x] Need to figure out the use of Word2Vec similarities for best segmentation.
 
