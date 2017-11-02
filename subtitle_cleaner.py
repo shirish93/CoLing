@@ -1,7 +1,7 @@
 #code to clean up srt files, and give you raw text. WARNING: makes heavy use of regex!!!
 def change_str(inp):
-  '''Given an srt file text, extracts just the raw text.
-  #input: str. Output: str
+	'''Given an srt file text, extracts just the raw text.'''
+	#input: str. Output: str
 	changes = [('[0-9]+\n[0-9:,]+ --> [0-9:,]+\n', ''),
 		   ('\n\n', ' '),
 		   ('<font color="#[A-Z0-9a-z]*">', ''),
